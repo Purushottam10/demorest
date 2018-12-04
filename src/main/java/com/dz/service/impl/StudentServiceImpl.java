@@ -34,7 +34,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public void saveStudent(Student student) {
-
+     studentDao.saveStudent(student);
     }
 
     @Override

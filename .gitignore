@@ -1,0 +1,4 @@
+# Created by .ignore support plugin (hsz.mobi)
+src/main/webapp/WEB-INF/resources/
+src/main/webapp/WEB-INF/views/
+target/generated-sources/

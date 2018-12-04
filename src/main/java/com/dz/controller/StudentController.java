@@ -55,9 +55,9 @@ public class StudentController {
     /**
      * to Add  a  new Student
      */
-     @RequestMapping(value = "/student/{rollNo}",method = RequestMethod.POST)
+     @RequestMapping(value = "/student",method = RequestMethod.POST)
         public ResponseEntity<Void> addStudent(@RequestBody Student student, UriComponentsBuilder uriComponentsBuilder){
-
+            log.info(student.getRollNO()+"  "+student.getName()+" "+student.getAge() +"during adding data");
          studentService.saveStudent(student);
          HttpHeaders headers=new HttpHeaders();
          headers.setLocation(uriComponentsBuilder.path("/student/{rollNo}").buildAndExpand(student.getRollNO()).toUri());

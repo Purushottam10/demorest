@@ -4,11 +4,14 @@ import com.dz.dao.StudentDao;
 import com.dz.model.Student;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 
@@ -35,7 +38,19 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public void saveStudent(Student student) {
-
+        Session session=this.sessionFactory.openSession();
+       Transaction transactional=session.getTransaction();
+        try{
+            transactional.begin();
+            session.saveOrUpdate(student);
+            transactional.commit();
+        }catch (Exception e){
+            log.error(e.getMessage(),e);
+           transactional.rollback();
+        }
+        finally {
+            session.close();
+        }
     }
 
     @Override
@@ -60,7 +75,6 @@ public class StudentDaoImpl implements StudentDao {
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
-
         return null;
 
     }
