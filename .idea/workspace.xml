@@ -6,19 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6b32afb-8373-45b8-bcb7-448e3993461a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dz/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dz/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dz/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dz/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dz/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dz/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dz/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dz/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dz/dao/impl/StudentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dz/dao/impl/StudentDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dz/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dz/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demorest/WEB-INF/classes/com/dz/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demorest/WEB-INF/classes/com/dz/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demorest/WEB-INF/classes/com/dz/dao/impl/StudentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demorest/WEB-INF/classes/com/dz/dao/impl/StudentDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demorest/WEB-INF/classes/com/dz/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demorest/WEB-INF/classes/com/dz/service/impl/StudentServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="b6b32afb-8373-45b8-bcb7-448e3993461a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,14 +82,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1780" />
-          <entry key="txt" value="16" />
+          <entry key="txt" value="28" />
           <entry key="xml" value="206" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1780" />
-          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="PLAIN_TEXT" value="28" />
           <entry key="XML" value="206" />
         </counts>
       </usages-collector>
@@ -515,7 +503,7 @@
       <updated>1543817988927</updated>
       <workItem from="1543817992664" duration="15406000" />
       <workItem from="1543898039752" duration="10292000" />
-      <workItem from="1543924155736" duration="1896000" />
+      <workItem from="1543924155736" duration="2204000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1543904059396</created>
@@ -531,16 +519,23 @@
       <option name="project" value="LOCAL" />
       <updated>1543904184578</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding data">
+      <created>1543926112466</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543926112466</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27594000" />
+    <option name="totallyTimeSpent" value="27902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="664" height="735" extended-state="0" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37055016" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -557,7 +552,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3284553" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3322314" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
@@ -582,7 +577,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="adding data" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding data" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dz/package-info.java" />
