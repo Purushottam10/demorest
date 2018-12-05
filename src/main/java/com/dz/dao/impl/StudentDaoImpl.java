@@ -4,14 +4,15 @@ import com.dz.dao.StudentDao;
 import com.dz.model.Student;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
 
 import java.util.List;
 
@@ -26,16 +27,31 @@ public class StudentDaoImpl implements StudentDao {
     public StudentDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
+
+    /**
+     * @param rollNo get the Student by their rollNo
+     * @return Student Object
+     */
     @Override
-    public Student findByRollNo(int rollNo) {
-        return null;
+    public Student getStudentByRollNo(int rollNo) {
+        log.info("here is getStudentById");
+        Criteria criteria = this.sessionFactory.openSession().createCriteria(Student.class);
+
+        try {
+            criteria.add(Restrictions.eq("rollNO", rollNo));
+            Student student = (Student) criteria.uniqueResult();
+            log.info(student.getRollNO() + "  " + student.getName() + " " + student.getAge());
+            return student;
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            return null;
+        }
     }
 
-    @Override
-    public Student findByName(String name) {
-        return null;
-    }
-
+    /**
+     *
+     * @param student add new student in the database
+     */
     @Override
     public void saveStudent(Student student) {
         Session session=this.sessionFactory.openSession();
@@ -55,11 +71,36 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public void updateStudent(Student student) {
+        Session session=this.sessionFactory.openSession();
+        Transaction transaction=session.getTransaction();
+        try {
+            transaction.begin();
+            session.update(student);
+            transaction.commit();
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            transaction.rollback();
+        }finally {
+            session.close();
+        }
 
     }
 
     @Override
-    public void deleteStudentById(int rollNo) {
+    public void deleteStudentById(Student student) {
+        Session session = this.sessionFactory.openSession();
+        Transaction transaction = session.getTransaction();
+        try {
+            transaction.begin();
+            session.delete(student);
+            transaction.commit();
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            transaction.rollback();
+        } finally {
+            session.close();
+        }
+
 
     }
 
@@ -79,13 +120,4 @@ public class StudentDaoImpl implements StudentDao {
 
     }
 
-    @Override
-    public void deleteAllStudent() {
-
-    }
-
-    @Override
-    public boolean isStudentExist(Student student) {
-        return false;
-    }
 }

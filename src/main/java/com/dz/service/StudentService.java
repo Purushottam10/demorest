@@ -5,19 +5,15 @@ import com.dz.model.Student;
 import java.util.List;
 
 public interface StudentService {
-    Student findByRollNo(int rollNo);
-
-   Student findByName(String name);
+    Student getStudentByRollNo(int rollNo);
 
     void saveStudent(Student student);
 
     void updateStudent(Student student);
 
-    void deleteStudentById(int rollNo);
+    void deleteStudentById(Student student);
 
     List<Student> findAllStudent();
 
-    void deleteAllStudent();
 
-    public boolean isStudentExist(Student student);
 }
